@@ -1,0 +1,312 @@
+:root {
+    --black-regular: rgb(0,0,0)
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+         url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src:  url("../fonts/Roboto-Bold.woff2") format("woff2"),
+          url("../fonts/Roboto-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  border:0px;
+  padding:0px;
+  white-space:nowrap;
+  clip-path:inset(100%);
+  clip:rect(0 0 0 0);
+  overflow:hidden;
+}
+
+.page {
+    height: 100%;
+}
+
+.page-body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #e5e5f7;
+    background: linear-gradient(135deg, #68754455 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #687544 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #68754455 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #687544 25%, #e5e5f7 25%) 0px 0/ 80px 80px;
+}
+
+.page-header {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;        
+    box-shadow: 0px 0px 5px var(--black-regular);
+    background-image: linear-gradient(rgb(176, 204, 149),rgb(221, 203, 98));
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.page-main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.page-main__inner {
+    width: 900px;
+    box-shadow: 0px 5px 15px black;
+    padding: 0 30px 0 30px;
+    background-color: rgb(162, 165, 118);
+    opacity: 0.9;
+}
+
+.header-inner__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 300px;
+    font-family: "Roboto";
+    font-size: 20px;
+
+}
+
+.main__about-me p {
+    text-align: left;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 80px;    
+    background-color: var(--footer);
+    background-image: linear-gradient(rgb(221, 203, 98), rgb(176, 204, 149));
+    box-shadow: 0px 5px 15px var(--black-regular);
+}
+
+.main__my-works-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 29px;
+}
+
+.main__my-works img {
+    border-radius: 3px;
+    transition: 1s;
+}
+
+.main__my-works img:hover {
+    border-radius: 51px;
+    width: 350px;
+    height: 250px;
+    transition: 1s;
+    box-shadow: 0 5px 12px black;
+    opacity: 1;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px 0 60px;
+    min-height: 100px;
+}
+
+.page-footer__phone-number {
+    text-decoration: none;
+    color: var(--black-regular);
+}
+
+.page-footer__social-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.github {
+    content: url(../img/icons/github.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.github:hover {
+    content: url(../img/icons/github-hover.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.telegram {
+    content: url(../img/icons/telegram.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.telegram:hover {
+    content: url(../img/icons/telegram-hover.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.linkedin {
+    content: url(../img/icons/linkedin.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.linkedin:hover{
+    content: url(../img/icons/linkedin-hover.svg);
+    position: relative;
+    left: 0;
+    top: 0;
+    background-size: 20px 20px;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.page-footer__title {
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer__tel-inner {
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer__phone-number {
+    position: relative;
+    left: 50px;
+    top: 0;
+    font-size: 15px;
+}
+
+.page-footer__phone-number:hover {
+    position: relative;
+    left: 50px;
+    top: 0;
+    text-decoration: underline;
+}
+
+.page-footer__phone-number::before {
+    content: "";
+    background-image: url(../img/icons/phone.png);
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: -12px;
+    font-size: 15px;
+}
+
+.page-footer__phone-number::before {
+    content: "";
+    background-image: url(../img/icons/phone.png);
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: -12px;
+    font-size: 15px;
+}
+
+.page-footer__phone-number:hover:before {
+    content: "";
+    background-image: url(../img/icons/phone.png);
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: -12px;
+    font-size: 15px;
+    transform: rotate(360deg);
+    transition: 1.5s;
+}
+
+.page-footer__email {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.page-footer__email:hover {
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.page-footer__email::before {
+    content: "";
+    background-image: url("../img/icons/email.png");
+    background-size: 40px;
+    width: 40px; 
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: -10px;
+    content:"";
+}
+
+.page-footer__email:hover:before {
+    content: "";
+    background-image: url("../img/icons/email.png");
+    background-size: 40px;
+    width: 40px; 
+    height: 40px;
+    position: absolute;
+    left: -50px;
+    top: -10px;
+    transform: rotate(360deg);
+    content:"";
+    transition: 1.5s;
+}
