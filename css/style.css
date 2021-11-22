@@ -1,5 +1,5 @@
 :root {
-    --black-regular: rgb(0,0,0)
+    --basic-color: rgb(247, 255, 204);
 }
 
 
@@ -45,7 +45,12 @@ input[type="radio"].visually-hidden {
     padding: 0;
     height: 100%;
     background-color: #e5e5f7;
-    background: linear-gradient(135deg, #68754455 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #687544 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #68754455 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #687544 25%, #e5e5f7 25%) 0px 0/ 80px 80px;
+    background:
+        linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+        linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+        linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+        background-color:#e1ebbd;
+        background-size: 128px 128px;
 }
 
 .page-header {
@@ -55,7 +60,7 @@ input[type="radio"].visually-hidden {
     align-items: center;
     min-height: 80px;        
     box-shadow: 0px 0px 5px var(--black-regular);
-    background-image: linear-gradient(rgb(176, 204, 149),rgb(221, 203, 98));
+    background-image: linear-gradient(rgb(71, 134, 126), rgb(37, 124, 95));
 }
 
 .main-container {
@@ -74,11 +79,16 @@ input[type="radio"].visually-hidden {
 
 
 .page-main__inner {
+    color: rgb(247, 255, 204);
     width: 900px;
     box-shadow: 0px 5px 15px black;
     padding: 0 30px 0 30px;
-    background-color: rgb(162, 165, 118);
+    background-color: rgba(61, 75, 45, 0.651);
     opacity: 0.9;
+}
+
+.main__title {
+    color: var(--basic-color);
 }
 
 .header-inner__list {
@@ -103,7 +113,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     min-height: 80px;    
     background-color: var(--footer);
-    background-image: linear-gradient(rgb(221, 203, 98), rgb(176, 204, 149));
+    background-image: linear-gradient(rgb(71, 134, 126), rgb(37, 124, 95));
     box-shadow: 0px 5px 15px var(--black-regular);
 }
 
@@ -137,7 +147,7 @@ input[type="radio"].visually-hidden {
 
 .page-footer__phone-number {
     text-decoration: none;
-    color: var(--black-regular);
+    color: var(--basic-color);
 }
 
 .page-footer__social-list {
@@ -238,7 +248,7 @@ input[type="radio"].visually-hidden {
 
 .page-footer__phone-number::before {
     content: "";
-    background-image: url(../img/icons/phone.png);
+    background-image: url(../img/icons/phone.svg);
     background-size: 40px;
     width: 40px;
     height: 40px;
@@ -250,7 +260,7 @@ input[type="radio"].visually-hidden {
 
 .page-footer__phone-number::before {
     content: "";
-    background-image: url(../img/icons/phone.png);
+    background-image: url(../img/icons/phone.svg);
     background-size: 40px;
     width: 40px;
     height: 40px;
@@ -262,10 +272,10 @@ input[type="radio"].visually-hidden {
 
 .page-footer__phone-number:hover:before {
     content: "";
-    background-image: url(../img/icons/phone.png);
-    background-size: 40px;
-    width: 40px;
-    height: 40px;
+    background-image: url(../img/icons/phone.svg);
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     left: -50px;
     top: -12px;
@@ -276,7 +286,7 @@ input[type="radio"].visually-hidden {
 
 .page-footer__email {
     position: relative;
-    color: black;
+    color: var(--basic-color);
     text-decoration: none;
 }
 
@@ -287,26 +297,24 @@ input[type="radio"].visually-hidden {
 
 .page-footer__email::before {
     content: "";
-    background-image: url("../img/icons/email.png");
+    background-image: url("../img/icons/email.svg");
     background-size: 40px;
     width: 40px; 
     height: 40px;
     position: absolute;
     left: -50px;
     top: -10px;
-    content:"";
 }
 
 .page-footer__email:hover:before {
     content: "";
-    background-image: url("../img/icons/email.png");
-    background-size: 40px;
-    width: 40px; 
-    height: 40px;
+    background-image: url("../img/icons/email.svg");
+    background-size: 30px;
+    width: 30px; 
+    height: 30px;
     position: absolute;
     left: -50px;
     top: -10px;
     transform: rotate(360deg);
-    content:"";
     transition: 1.5s;
 }
