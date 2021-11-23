@@ -6,24 +6,29 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Timur Tokumov</title>
+    <title class="page__title lng-title">Timur Tokumov</title>
 </head>
 
 <body class="page-body">
     <div class="main-container">
         <header class="page-header">
-            <div class="header-inner">
-                <h1 class="main__title">Hello! Welcome to my personal webpage!</h1>
+            <div class="page-header__inner">
+                <div class="header-inner">
+                    <h1 class="page-header__title lng-heading">Hello! Welcome to my personal webpage!</h1>
+                </div>
+                <select class="page-header__lang">
+                    <option class="page-header__lang-items" value="ru">RU</option>
+                    <option class="page-header__lang-items" value="en" selected>EN</option>
+                </select>
             </div>
         </header>
     
         <main class="page-main">
             <div class="page-main__inner">
-
                 <section class="main__my-works">
                     <div class="main__about-me-wrapper">
-                        <h2 class="main__about-me-title">About me</h2>
-                        <p class="main__about-me">
+                        <h2 class="main__about-me-title lng-subheading">About me</h2>
+                        <p class="main__about-me lng-about">
                             My name is Timur. I'm from Kazakhstan. I recently completed HTML academy online course that lasted 9 months and I continue to evolve in this direction. Below you can see projects which I did.
                         </p>
                     </div>
@@ -38,7 +43,7 @@
 
         <footer class="page-footer">
             <h2 class="visually-hidden">Contacts</h2>
-            <p><a class="page-footer__phone-number" href="tel:+77761133222">tel: +7(776) 113-32-22</a></p>
+            <p><a class="page-footer__phone-number" href="tel:+77761133222"><span class="lng-tel">tel:</span> +7(776) 113-32-22</a></p>
             
             <ul class="page-footer__social-list">
                 <li><a class="page-footer__social-items github" href="https://github.com/TTscript" aria-label="Github" target="_blank"></a></li>
@@ -50,5 +55,6 @@
             </div>
         </footer>    
     </div>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
