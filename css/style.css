@@ -19,6 +19,7 @@
     font-style: normal;
   }
 
+
   .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -73,9 +74,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80px;        
     box-shadow: 0px 0px 5px var(--black-regular);
     background-image: linear-gradient(rgb(71, 134, 126), rgb(37, 124, 95));
+    padding: 20px;
 }
 
 .page-header__inner {
@@ -84,6 +85,11 @@ a {
     align-items: center;
     min-width: 900px;
     padding: 0 40px;
+}
+
+.page-header__title {
+    padding: 0;
+    margin: 0;
 }
 
 .page-header__lang {
@@ -98,6 +104,16 @@ a {
     flex-direction: column;
     height: 100%;
     text-align: center;
+}
+
+.main__about-me-title {
+    padding: 0;
+    margin: 0;
+}
+
+.main__about-me {
+    padding: 0;
+    margin: 0;
 }
 
 .page-main {
@@ -129,20 +145,18 @@ a {
     font-size: 20px;
 }
 
-.main__about-me p {
-    text-align: left;
+.main__about-me-title {
+    margin-bottom: 20px;
 }
 
-.page-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main__about-me p {
+    text-align: left;
     padding: 0;
     margin: 0;
-    min-height: 80px;    
-    background-color: var(--footer);
-    background-image: linear-gradient(rgb(71, 134, 126), rgb(37, 124, 95));
-    box-shadow: 0px 5px 15px var(--black-regular);
+}
+
+.main__my-works {
+    padding-top: 20px;
 }
 
 .main__my-works-wrapper {
@@ -150,6 +164,8 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 29px;
+    padding: 0;
+    margin: 20px;
 }
 
 .main__my-works img {
@@ -168,11 +184,17 @@ a {
     opacity: 1;
 }
 
+
 .page-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 100px;    
+    background-color: var(--footer);
+    background-image: linear-gradient(rgb(71, 134, 126), rgb(37, 124, 95));
+    box-shadow: 0px 5px 15px var(--black-regular);
     padding: 0 60px 0 60px;
-    min-height: 100px;
+    margin: 0;
 }
 
 .page-footer__phone-number {
@@ -184,6 +206,8 @@ a {
     display: flex;
     gap: 20px;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .github {
@@ -250,6 +274,11 @@ a {
     width: 50px;
     height: 50px;
     transition: 0.3s;
+}
+
+.page-footer p {
+    padding: 0;
+    margin: 0;
 }
 
 .page-footer__title {
@@ -347,4 +376,108 @@ a {
     top: -10px;
     transform: rotate(360deg);
     transition: 1.5s;
+}
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 10px;
+    }
+    .page-header__title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .page-header__inner {
+        min-width: 0;
+        padding: 0 10px;
+        margin: 0;
+    }
+    .page-footer {
+        display: block;
+        padding: 20px;
+        min-height: 130px;
+    }
+
+    .page-footer p {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .page-footer__social-list {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .page-footer__phone-number {
+        position: relative;
+        left: 20px;
+        top: 0;
+        font-size: 15px;
+    }
+
+    .page-footer__phone-number::before {
+        content: "";
+        background-image: url(../img/icons/phone.svg);
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: -50px;
+        top: -12px;
+        font-size: 15px;
+    }
+
+    .github {
+        content: url(../img/icons/github.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px 30px;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .linkedin {
+        content: url(../img/icons/linkedin.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px 30px;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .telegram {
+        content: url(../img/icons/telegram.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px 30px;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+    }
+
+    .page-footer__email {
+        position: relative;
+        left: 22px;
+        top: 0;
+        color: var(--basic-color);
+        text-decoration: none;
+    }
+
+    .page-footer__email::before {
+        content: "";
+        background-image: url("../img/icons/email.svg");
+        background-size: 30px;
+        width: 30px; 
+        height: 30px;
+        position: absolute;
+        left: -50px;
+        top: -10px;
+    }
+
+
 }
