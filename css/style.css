@@ -317,18 +317,6 @@ a {
     font-size: 15px;
 }
 
-.page-footer__phone-number::before {
-    content: "";
-    background-image: url(../img/icons/phone.svg);
-    background-size: 40px;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: -50px;
-    top: -12px;
-    font-size: 15px;
-}
-
 .page-footer__phone-number:hover:before {
     content: "";
     background-image: url(../img/icons/phone.svg);
@@ -385,6 +373,7 @@ a {
     .page-header__title {
         font-size: 26px;
         text-align: center;
+        margin-right: 10px;
     }
 
     .page-header__inner {
@@ -415,7 +404,14 @@ a {
         font-size: 15px;
     }
 
-    .page-footer__phone-number::before {
+    .page-footer__phone-number:hover {
+        position: relative;
+        left: 20px;
+        top: 0;
+        font-size: 15px;
+    }
+
+        .page-footer__phone-number::before {
         content: "";
         background-image: url(../img/icons/phone.svg);
         background-size: 30px;
@@ -427,6 +423,20 @@ a {
         font-size: 15px;
     }
 
+    .page-footer__phone-number:hover:before {
+        content: "";
+        background-image: url(../img/icons/phone.svg);
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: -50px;
+        top: -12px;
+        font-size: 15px;
+        transform: rotate(360deg);
+        transition: 1.5s;
+    }
+
     .github {
         content: url(../img/icons/github.svg);
         position: relative;
@@ -435,6 +445,18 @@ a {
         background-size: 30px 30px;
         width: 30px;
         height: 30px;
+        transition: 0.3s;
+    }
+
+    .github:hover {
+        content: url(../img/icons/github.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        transform: scale(1.3);
         transition: 0.3s;
     }
 
@@ -449,6 +471,18 @@ a {
         transition: 0.3s;
     }
 
+    .linkedin:hover {
+        content: url(../img/icons/linkedin.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        transform: scale(1.3);
+        transition: 0.3s;
+    }
+
     .telegram {
         content: url(../img/icons/telegram.svg);
         position: relative;
@@ -457,6 +491,18 @@ a {
         background-size: 30px 30px;
         width: 30px;
         height: 30px;
+        transition: 0.3s;
+    }
+
+    .telegram:hover {
+        content: url(../img/icons/telegram.svg);
+        position: relative;
+        left: 0;
+        top: 0;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        transform: scale(1.3);
         transition: 0.3s;
     }
 
@@ -479,5 +525,16 @@ a {
         top: -10px;
     }
 
+}
 
+@media (min-width: 768px) {
+    .page-header__inner {
+        min-width: 0;
+        padding: 0 20px;
+    }
+
+    .page-header__title {
+        text-align: center;
+        margin-right: 30px;
+    }
 }
