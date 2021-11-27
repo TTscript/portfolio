@@ -124,12 +124,29 @@ a {
 }
 
 .page-main__inner {
+    position: relative;
     color: rgb(247, 255, 204);
     width: 900px;
     box-shadow: 0px 5px 15px black;
     padding: 0 30px 0 30px;
     background-color: rgba(61, 75, 45, 0.651);
     opacity: 0.9;
+}
+
+.page-main__inner:after {
+    content: "";
+    background-image: url(../img/icons/christmas-tree.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;  
+    position: absolute;
+    right: 0;
+    top: 0;  
+}
+
+.page-main__inner:hover:after {
+    cursor: pointer;
 }
 
 .page-header__title {
@@ -536,5 +553,246 @@ a {
     .page-header__title {
         text-align: center;
         margin-right: 30px;
+    }
+}
+
+/* ---------------------------------------- NEW YEAR ---------------------------------------- */
+
+ .page-body-new-year {
+     background-image: url(../img/new-year/background.jpg);
+     background-size: cover;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0; 
+     padding: 0;    
+ }
+
+ .new-year__lang {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ---------------------------------------- SLIDER ---------------------------------------- */
+
+.slider {
+    width: 1300px;
+    height: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 500%;
+    height: 800px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 1300px;
+    height: 800px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 1300px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: skyblue;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1300px;
+    justify-content: center;
+    margin-top: 760px;
+    transition: 1s;
+}
+
+.navigation-auto div {
+    border: 2px solid skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: skyblue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: skyblue;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: skyblue;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: skyblue;
+}
+
+/* ---------------------------------------- TIMER ---------------------------------------- */
+
+.new-year-countdown {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+
+.main-container__time {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.main-container__time p {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main-container__title {
+    text-align: center;
+    font-size: 130px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: whitesmoke
+}
+
+@media (max-width: 1300px) {
+    .navigation-auto {
+        width: 800px;
+    }
+
+    .navigation-manual {
+        width: 800px;
+    }
+
+    .slide img {
+        width: 800px;
+    }
+
+    .slider {
+        width: 800px;
+    }
+
+    .main-container__title {
+        font-size: 80px;
+    }
+
+    .main-container__time {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation-auto {
+        width: 400px;
+    }
+
+    .navigation-manual {
+        width: 400px;
+    }
+
+    .slide img {
+        width: 400px;
+        height: 500px;
+    }
+
+    .slider {
+        width: 400px;
+        height: 500px;
+    }
+
+    .main-container__title {
+        font-size: 30px;
+    }
+
+    .main-container__time {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navigation-auto {
+        width: 300px;
+    }
+
+    .navigation-manual {
+        width: 300px;
+    }
+
+    .slide img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .slider {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-container__title {
+        font-size: 25px;
+    }
+
+    .main-container__time {
+        font-size: 8px;
     }
 }

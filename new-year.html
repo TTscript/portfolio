@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title class="page__title lng-title">Timur Tokumov</title>
+</head>
+
+<body class="page-body-new-year">
+    <main class="main-new-year"> 
+        <select class="page-header__lang new-year__lang visually-hidden">
+            <option class="page-header__lang-items" value="ru">RU</option>
+            <option class="page-header__lang-items" value="en" selected>EN</option>
+        </select>
+
+            <div class="slider">
+                <div class="new-year-countdown">
+                    <div class="main-container__time">
+                        <div class="main-new-year__days">
+                            <p class="main-new-year__days-num">00</p>
+                            <p class="main-new-year__days-text">days</p>
+                        </div>
+                        <div class="main-new-year__hours">
+                            <p class="main-new-year__hours-num">00</p>
+                            <p class="main-new-year__hours-text">hours</p>
+                        </div>
+                        <div class="main-new-year__minutes">
+                            <p class="main-new-year__minutes-num">00</p>
+                            <p class="main-new-year__minutes-text">minutes</p>
+                        </div>
+                        <div class="main-new-year__seconds">
+                            <p class="main-new-year__seconds-num">00</p>
+                            <p class="main-new-year__seconds-text">seconds</p>
+                        </div>
+                    </div>
+                      <h1 class="main-container__title">to the new year</h1> 
+                </div>    
+
+        <div class="slides">
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="/img/new-year/new-year1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/new-year/new-year2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/new-year/new-year3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/new-year/new-year4.jpg" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+        </div>
+
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+    </div>
+       
+      
+    </main>
+    <script src="index.js" type="module"></script>
+    <script>
+        let counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
