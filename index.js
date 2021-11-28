@@ -38,7 +38,8 @@ function changeLanguage() {
 }
 changeLanguage();
 
-const days = document.querySelector('.main-new-year__days-num');
+if (window.location.pathname === '/new-year.html') {
+    const days = document.querySelector('.main-new-year__days-num');
 const hours = document.querySelector('.main-new-year__hours-num');
 const minutes = document.querySelector('.main-new-year__minutes-num');
 const seconds = document.querySelector('.main-new-year__seconds-num');
@@ -63,3 +64,5 @@ function updateCountdownTime() {
 }
 
 setInterval(updateCountdownTime, 1000);
+}
+
