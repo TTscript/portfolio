@@ -4,13 +4,11 @@ const select = document.querySelector('select');
 const allLang = ['en', 'ru'];
 const christmasTree = document.querySelector('.page-main__inner');
 
+if (window.location.pathname === '/portfolio/') {
     christmasTree.addEventListener('click', () => {
-        if (window.location.pathname === '/portfolio/') {
-            window.location.pathname = '/portfolio/new-year';
-        } else {
-            window.location.pathname = '/new-year.html';
-        }
+        window.location.pathname = '/portfolio/new-year';
     });
+}
 
 select.addEventListener('change', changeUrlLanguage)
 
