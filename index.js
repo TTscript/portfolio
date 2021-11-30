@@ -67,6 +67,14 @@ if (window.location.pathname === '/new-year.html' || window.location.pathname ==
 }
 
     setInterval(updateCountdownTime, 1000);
+    let counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
 } 
 
 window.addEventListener('mousemove', (e) => {
