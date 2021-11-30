@@ -2,11 +2,15 @@ import { langToggle } from './lang-toggle.js';
 
 const select = document.querySelector('select');
 const allLang = ['en', 'ru'];
-const christmasTree = document.querySelector('.page-main__inner');
+const christmasTree = document.querySelector('.christmas-tree');
 
-if (window.location.pathname === '/portfolio/') {
+if (window.location.pathname === '/portfolio/' || window.location.pathname === '/index.html') {
     christmasTree.addEventListener('click', () => {
-        window.location.pathname = '/portfolio/new-year';
+        if (window.location.pathname === '/portfolio/') {
+            window.location.pathname = '/portfolio/new-year';
+        } else if (window.location.pathname === '/index.html') {
+            window.location.pathname = '/new-year.html';
+        }
     });
 }
 
@@ -38,7 +42,7 @@ function changeLanguage() {
 }
 changeLanguage();
 
-if (window.location.pathname === '/new-year.html') {
+if (window.location.pathname === '/new-year.html' || window.location.pathname === '/portfolio/new-year') {
     const days = document.querySelector('.main-new-year__days-num');
     const hours = document.querySelector('.main-new-year__hours-num');
     const minutes = document.querySelector('.main-new-year__minutes-num');
@@ -60,9 +64,11 @@ if (window.location.pathname === '/new-year.html') {
         hours.innerHTML = h < 10 ? '0' + h : h; 
         minutes.innerHTML = m < 10 ? '0' + m : m; 
         seconds.innerHTML = s < 10 ? '0' + s : s; 
-
 }
 
     setInterval(updateCountdownTime, 1000);
-}
+} 
 
+window.addEventListener('mousemove', (e) => {
+    console.log(e.path);
+});

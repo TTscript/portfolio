@@ -124,7 +124,6 @@ a {
 }
 
 .page-main__inner {
-    pointer-events: none;
     position: relative;
     color: rgb(247, 255, 204);
     width: 900px;
@@ -134,22 +133,19 @@ a {
     opacity: 0.9;
 }
 
-.page-main__inner:after {
-    pointer-events: all;
-    content: "";
-    background-image: url(../img/icons/christmas-tree.png);
-    background-size: 50px;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;  
+.christmas-tree {
     position: absolute;
     right: 0;
     top: 0;  
-}
-
-.page-main__inner:hover:after {
     cursor: pointer;
 }
+
+.christmas-tree:hover {
+    box-shadow: 1px 5px 13px black;
+    border-radius: 30%;
+    transition: 0.4s;
+}
+
 
 .page-header__title {
     color: var(--basic-color);
@@ -175,7 +171,6 @@ a {
 }
 
 .main__my-works {
-    pointer-events: all;
     padding-top: 20px;
 }
 
@@ -196,14 +191,12 @@ a {
 }
 
 .main__my-works img:hover {
-    border-radius: 51px;
-    width: 350px;
-    height: 250px;
+    border-radius: 50px;
+    transform: scale(1.3);
     transition: 1s;
     box-shadow: 10px 15px 44px var(--basic-color);
     opacity: 1;
 }
-
 
 .page-footer {
     display: flex;
@@ -247,8 +240,7 @@ a {
     left: 0;
     top: 0;
     background-size: 20px 20px;
-    width: 50px;
-    height: 50px;
+    transform: scale(1.3);
     transition: 0.3s;
 }
 
@@ -269,8 +261,7 @@ a {
     left: 0;
     top: 0;
     background-size: 20px 20px;
-    width: 50px;
-    height: 50px;
+    transform: scale(1.3);
     transition: 0.3s;
 }
 
@@ -291,8 +282,7 @@ a {
     left: 0;
     top: 0;
     background-size: 20px 20px;
-    width: 50px;
-    height: 50px;
+    transform: scale(1.3);
     transition: 0.3s;
 }
 
