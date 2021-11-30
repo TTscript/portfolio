@@ -5,7 +5,8 @@ const allLang = ['en', 'ru'];
 const christmasTree = document.querySelector('.page-main__inner');
 
     christmasTree.addEventListener('click', () => {
-        window.location.pathname = '/new-year.html';
+        window.location.pathname = '/new-year';
+        console.log('click');
     });
 
 select.addEventListener('change', changeUrlLanguage)
