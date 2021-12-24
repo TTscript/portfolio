@@ -76,7 +76,3 @@ if (window.location.pathname === '/new-year.html' || window.location.pathname ==
             }
         }, 5000);
 } 
-
-window.addEventListener('mousemove', (e) => {
-    console.log(e.path);
-});
