@@ -4,16 +4,6 @@ const select = document.querySelector('select');
 const allLang = ['en', 'ru'];
 const christmasTree = document.querySelector('.christmas-tree');
 
-if (window.location.pathname === '/portfolio/' || window.location.pathname === '/index.html') {
-    christmasTree.addEventListener('click', () => {
-        if (window.location.pathname === '/portfolio/') {
-            window.location.pathname = '/portfolio/new-year';
-        } else if (window.location.pathname === '/index.html') {
-            window.location.pathname = '/new-year.html';
-        }
-    });
-}
-
 select.addEventListener('change', changeUrlLanguage)
 
 function changeUrlLanguage() {
@@ -41,38 +31,3 @@ function changeLanguage() {
     }
 }
 changeLanguage();
-
-if (window.location.pathname === '/new-year.html' || window.location.pathname === '/portfolio/new-year') {
-    const days = document.querySelector('.main-new-year__days-num');
-    const hours = document.querySelector('.main-new-year__hours-num');
-    const minutes = document.querySelector('.main-new-year__minutes-num');
-    const seconds = document.querySelector('.main-new-year__seconds-num');
-
-    const currentDate = new Date().getFullYear();
-    const newYear = new Date(`January 1 ${currentDate + 1} 00:00:00`);
-
-    function updateCountdownTime() {
-        const currentTime = new Date();
-        const diff = newYear - currentTime;
-
-        const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-        const h = Math.floor(diff / 1000 / 60 / 60) % 24 ;
-        const m = Math.floor(diff / 1000 / 60) % 60;
-        const s = Math.floor(diff / 1000) % 60;
-
-        days.innerHTML = d;
-        hours.innerHTML = h < 10 ? '0' + h : h; 
-        minutes.innerHTML = m < 10 ? '0' + m : m; 
-        seconds.innerHTML = s < 10 ? '0' + s : s; 
-}
-
-    setInterval(updateCountdownTime, 1000);
-    let counter = 1;
-        setInterval(function() {
-            document.getElementById('radio' + counter).checked = true;
-            counter++;
-            if (counter > 4) {
-                counter = 1;
-            }
-        }, 5000);
-} 

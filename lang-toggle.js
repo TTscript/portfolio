@@ -13,8 +13,8 @@ export const langToggle = {
       ru: `Обо мне`,  
     },
     about: {
-        en: `My name is Timur. I'm from Kazakhstan. Below you can see projects which I did.`,
-        ru: `Меня зовут Тимур. В настоящее время живу в Казахстане. Ниже вы можете увидеть проекты, которыми я занимался.`,
+        en: `My name is Timur. I'm Front-end Developer. My skills: html, css, sass, js, gulp, bem. Below you can see projects which I did.`,
+        ru: `Меня зовут Тимур. Я Фронт-енд разработчик. Мои новыки: html, css, sass, js, gulp, bem. Ниже вы можете увидеть проекты, которыми я занимался.`,
     },
     tel: {
         en: `tel`,
