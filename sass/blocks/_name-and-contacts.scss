@@ -1,0 +1,66 @@
+.name-and-contacts {
+  margin: 0 0 60px;
+  padding: 0;
+}
+
+.name-and-contacts h3 {
+  position: relative;
+  font-family: "Montserrat Black", "Roboto", sans-serif;
+  color: $black-coffee;
+  font-size: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+.name-and-contacts p {
+  color: $black-coffee;
+  font-family: "Montserrat Bold";
+  font-size: 16px;
+  border-bottom: 2px solid $black-coffee;
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+}
+
+.name-and-contacts p[data-profession="profession"] {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 50px;
+  border: 0;
+}
+
+p[data-phone="phone"] a {
+  color: $black-coffee;
+}
+
+p[data-phone="phone"] a::before {
+  content: "";
+  display: inline-block;
+  -webkit-mask: url("../img/svg/phone.svg");
+  mask: url("../img/svg/phone.svg");
+  -webkit-mask-size: 20px;
+  mask-size: 20px;
+  background-color: $black-coffee;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.name-and-contacts p[data-address="address"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask: url("../img/svg/location.svg");
+  mask: url("../img/svg/location.svg");
+  -webkit-mask-size: 20px;
+  mask-size: 20px;
+  background-color: $black-coffee;
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+}
+
+.name-and-contacts p[data-address="address"] {
+  position: relative;
+  padding-left: 45px;
+}

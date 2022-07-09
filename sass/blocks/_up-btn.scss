@@ -1,0 +1,90 @@
+.up-btn {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 52px;
+  bottom: 20px;
+  overflow: hidden;
+  background-color: $saffron;
+  border-radius: 5%;
+  text-align: right;
+  width: 61px;
+  height: 61px;
+  z-index: 999;
+  box-shadow: 0 4px 15px 0 $color-button-shadow;
+  margin: 0;
+  padding: 0;
+  transition: opacity $trans-default;
+
+  @include no-touch {
+    &:hover,
+    &:focus {
+      background-color: $saffron;
+      // opacity: 0.8;
+      transition: background-color 2s ease;
+    }
+  }
+
+  @include vp-1023 {
+    right: 21px;
+    padding: 0;
+  }
+}
+
+.up-btn--appear {
+  opacity: 1;
+  animation: show-button 1s ease forwards;
+}
+
+@keyframes show-button {
+  0% {
+    bottom: 1000px;
+    transform: scale(3.3);
+  }
+
+  100% {
+    bottom: 20px;
+    transform: scale(1);
+  }
+}
+
+.up-btn svg {
+  fill: transparent;
+  pointer-events: none;
+}
+
+.up-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.5s;
+}
+
+.up-btn:hover::before {
+  left: 100%;
+  transition: 0.7s ease;
+}
+
+
+// .up-btn--start-roll {
+//   animation: start-roll 5s linear 5s infinite;
+// }
+
+// @keyframes start-roll {
+//   0% {
+//     bottom: 20px;
+//     transform: rotate(0);
+//   }
+
+//   100% {
+//     bottom: 20px;
+//     transform: rotate(180deg);
+//   }
+// }
+

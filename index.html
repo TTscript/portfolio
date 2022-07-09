@@ -1,68 +1,221 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title class="page__title lng-title">Timur Tokumov</title>
-</head>
-
-<body class="page-body">
-    <div class="main-container">
-        <header class="page-header">
-            <div class="page-header__inner">
-                <div class="header-inner">
-                    <h1 class="page-header__title lng-heading">Hello! Welcome to my personal webpage!</h1>
-                </div>
-                <select class="page-header__lang">
-                    <option class="page-header__lang-items" value="ru">RU</option>
-                    <option class="page-header__lang-items" value="en" selected>EN</option>
-                </select>
-            </div>
-        </header>
-    
-        <main class="page-main">
-            <div class="page-main__inner">
-                <section class="main__my-works">
-                    <div class="main__about-me-wrapper">
-                        <h2 class="main__about-me-title lng-subheading">ABOUT ME</h2>
-                        <p class="main__about-me lng-about">
-                            My name is Timur. I'm Front-end Developer. My skills: html, css, sass, js, gulp, bem. <br> Below you can see projects which I did.
-                        </p>
-                    </div>
-                    <div class="main__my-works-wrapper">
-                        <a class="main__my-works" href="https://ttscript.github.io/Tokumov_fitness/build/" target="_blank"><img src="./img/projects/fitness.png" height="200" width="300" alt="Fitness"></a>                
-                        <a class="main__my-works" href="https://ttscript.github.io/Tokumov_jewellery/build/" target="_blank"><img src="./img/projects/jewellery.png" height="200" width="300" alt="Jewellery"></a>                
-                        <a class="main__my-works" href="https://ttscript.github.io/Tokumov_smart-device/build/" target="_blank"><img src="./img/projects/smart-device.png" height="200" width="300" alt="Smart Device"></a>                
-                        <a class="main__my-works" href="https://ttscript.github.io/Tokumov_bycicles/build/" target="_blank"><img src="./img/projects/bycicles.png" height="200" width="300" alt="Moon. Bycicles store"></a>                
-                        <a class="main__my-works" href="https://ttscript.github.io/Tokumov_way/src/" target="_blank"><img src="./img/projects/travelling-to-europe.png" height="200" width="300" alt="Travelling to Europe"></a>        
-                        <a class="main__my-works" href="https://ttscript.github.io/1675795-keksobooking-23/" target="_blank"><img src="./img/projects/keksobooking.png" height="200" width="300" alt="Keksobooking"></a>                
-                        <a class="main__my-works" href="https://ttscript.github.io/1675795-cat-energy-22/" target="_blank"><img src="./img/projects/cat-energy.png" height="200" width="300" alt="Cat Energy"></a>
-                        <a class="main__my-works" href="https://ttscript.github.io/1675795-sedona-30/" target="_blank"><img src="./img/projects/sedona.png" height="200" width="300" alt="Sedona"></a>
-                    </div>    
-                    </div>    
-                    </div>    
-                </section>
-            </div>
-        </main>    
-
-        <footer class="page-footer">
-            <h2 class="visually-hidden">Contacts</h2>
-            <p><a class="page-footer__phone-number" href="tel:+77761133222"><span class="lng-tel">tel:</span> +7(776) 113-32-22</a></p>
-            
-            <ul class="page-footer__social-list">
-                <li><a class="page-footer__social-items github" href="https://github.com/TTscript" aria-label="Github" target="_blank"></a></li>
-                <li><a class="page-footer__social-items linkedin" href="https://www.linkedin.com/in/timur-tokumov-572553203/" aria-label="Linkedin" target="_blank"></a></li>
-                <li><a class="page-footer__social-items telegram" href="tg://resolve?domain=ttscript" aria-label="Telegramm" target="_blank"></a></li>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="sass/style.css">
+      <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <a class="up-btn" data-btn="up-btn" href="#" aria-label="Кнопка в начало страницы">
+        <img src="img/svg/arrow.svg" width="40" height="45" alt="Стрелка">
+      </a>
+      <header class="page-header">
+        <div class="page-header__inner">
+          <button class="burger-menu" type="button" aria-label="burger-menu"><span></span></button>
+          <nav>
+            <ul>
+              <li><a href="#all-skills">All skills</a></li>
+              <li><a href="#strengths">Strengths</a></li>
+              <li><a href="#code">Code example</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#phone">Phone</a></li>
+              <li><a href="#socials">Socials</a></li>
             </ul>
-            <div class="page-footer__email-wrapper">
-                <a class="page-footer__email" href="mailto:t.tokumov@gmail.com">t.tokumov@gmail.com</a>
+          </nav>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="contact-info">
+          <h2 class="visually-hidden">Contact information and skills</h2>
+          <section class="photo-block">
+            <h2 class="visually-hidden">Photo</h2>
+            <div class="photo-block__wrapper">
+              <img src="img/photo.jpg" width="330" height="330" alt="Author's photo">
             </div>
-        </footer>    
+          </section>
+          <section class="info-block">
+            <h2 class="visually-hidden">Information block</h2>
+            <section class="name-and-contacts">
+              <h2 class="visually-hidden">Name and contacts</h2>
+              <h3>Timur Tokumov</h3>
+              <div class="profession-block">
+                <div class="rhombuses">
+                  <div class="rhombus"></div>
+                  <div class="rhombus"></div>
+                  <div class="rhombus"></div>
+                  <div class="rhombus"></div>
+                </div>
+                <p data-profession="profession">Front-end Developer</p>
+              </div>
+              <p id="phone" data-phone="phone"><a href="tel:+77761133222">+7-776-113-32-22</a></p>
+              <p data-address="address">Nur-Sultan, <br> Kazakhstan 010000</p>
+            </section>
+            <section class="skills">
+              <h2 class="visually-hidden">My skills</h2>
+              <div class="skill">
+                <div class="skill__inner pug">
+                  <div class="skill__img"></div>
+                </div>
+                <p>PUG</p>
+              </div>
+              <div class="skill">
+                <div class="skill__inner sass">
+                  <div class="skill__img"></div>
+                </div>
+                <p>SASS</p>
+              </div>
+              <div class="skill">
+                <div class="skill__inner js">
+                  <div class="skill__img"></div>
+                </div>
+                <p>JAVASCRIPT</p>
+              </div>
+              <div class="skill">
+                <div class="skill__inner gulp">
+                  <div class="skill__img"></div>
+                </div>
+                <p>GULP</p>
+              </div>
+              <div class="skill">
+                <div class="skill__inner git">
+                  <div class="skill__img"></div>
+                </div>
+                <p>GIT</p>
+              </div>
+              <div class="skill">
+                <div class="skill__inner figma">
+                  <div class="skill__img"></div>
+                </div>
+                <p>FIGMA</p>
+              </div>
+            </section>
+            <section id="socials" class="socials">
+              <h2 class="visually-hidden">Socials</h2>
+              <ul class="socials__inner">
+                <li class="social github">
+                  <a class="social__img" href="https://github.com/TTscript"></a>
+                </li>
+                <li class="social telegram">
+                  <a class="social__img" href="tg://resolve?domain=ttscript"></a>
+                </li>
+                <li class="social linkedin">
+                  <a class="social__img" href="https://www.linkedin.com/in/timur-tokumov-572553203/"></a>
+                </li>
+                <li class="social discord">
+                  <a class="social__img" href="https://discordapp.com/users/ttscript/"></a>
+                </li>
+              </г>
+            </section>
+          </section>
+        </section>
+        <section class="main-info">
+          <h1 class="visually-hidden">Main information</h1>
+          <section class="about-me">
+            <h2>About me</h2>
+            <h3>Good time of day! I am Timur. <br> I'm a Frontend Developer.</h3>
+            <p> I have 1.5 years of experience in non-commercial projects and 2 months of experience in commercial projects. Every day I learn something new and improve my skills in my chosen field of activity.</p>
+          </section>
+          <section id="all-skills" class="all-skills">
+            <h2>All skills</h2>
+            <ul>
+              <li>Pug, HTML, BEM</li>
+              <li>CSS, SASS</li>
+              <li>JavaScript</li>
+              <li>Git, GitHub</li>
+              <li>Gulp</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>English - B1</li>
+            </ul>
+          </section>
+          <section id="strengths" class="strong-sides">
+            <h2>Strengths</h2>
+            <ul>
+              <li>Hardworking</li>
+              <li>Responsible</li>
+              <li>Energetic</li>
+              <li>Organaised</li>
+              <li>Reliable</li>
+              <li>Sociable</li>
+              <li>Conscientious</li>
+              <li>Motivated</li>
+            </ul>
+          </section>
+          <section id="code" class="code-exapmles">
+            <h2>Code example</h2>
+            <pre>
+              <code>
+    function createPhoneNumber(numbers) {
+      return `(${(numbers.slice(0, 3)
+        .join(''))}) ${numbers
+        .slice(3, 6)
+        .join('')}-${numbers.slice(6)
+        .join('')}`;
+    }
+              </code>
+            </pre>
+          </section>
+          <section id="projects" class="projects">
+            <h2>My projects</h2>
+            <div class="projects__inner">
+              <a class="project" href="https://ttscript.github.io/Tokumov_fitness/build/" target="_blank"><img src="./img/projects/fitness.png" height="200" width="300" alt="Fitness"></a>
+              <a class="project" href="https://ttscript.github.io/Tokumov_jewellery/build/" target="_blank"><img src="./img/projects/jewellery.png" height="200" width="300" alt="Jewellery"></a>
+              <a class="project" href="https://ttscript.github.io/Tokumov_smart-device/build/" target="_blank"><img src="./img/projects/smart-device.png" height="200" width="300" alt="Smart Device"></a>
+              <a class="project" href="https://ttscript.github.io/Tokumov_bycicles/build/" target="_blank"><img src="./img/projects/bycicles.png" height="200" width="300" alt="Moon. Bycicles store"></a>
+              <a class="project" href="https://ttscript.github.io/Tokumov_way/src/" target="_blank"><img src="./img/projects/travelling-to-europe.png" height="200" width="300" alt="Travelling to Europe"></a>
+              <a class="project" href="https://ttscript.github.io/1675795-keksobooking-23/" target="_blank"><img src="./img/projects/keksobooking.png" height="200" width="300" alt="Keksobooking"></a>
+              <a class="project" href="https://ttscript.github.io/1675795-cat-energy-22/" target="_blank"><img src="./img/projects/cat-energy.png" height="200" width="300" alt="Cat Energy"></a>
+              <a class="project" href="https://ttscript.github.io/1675795-sedona-30/" target="_blank"><img src="./img/projects/sedona.png" height="200" width="300" alt="Sedona"></a>
+            </div>
+          </section>
+          <section class="education">
+            <h2>Education</h2>
+            <div id="education" class="education__inner">
+              <div class="education__item">
+                <h3>React. Development of Complex Front-end Applications</h3>
+                <p>09/27 - 11/28 2021</p>
+                <p>HTML Academy</p>
+              </div>
+              <div class="education__item">
+                <h3>JavaScript. Architecture of Front-end Applications</h3>
+                <p>07/26 - 09/26 2021</p>
+                <p>HTML Academy</p>
+              </div>
+              <div class="education__item">
+                <h3>JavaScript. Professional Development of Web Interfaces</h3>
+                <p>05/25 - 07/25 2021</p>
+                <p>HTML Academy</p>
+              </div>
+              <div class="education__item adaptive-website">
+                <h3>HTML & CSS. Adaptive Website Coding and Automation</h3>
+                <p>03/22 - 05/23 2021</p>
+                <p>HTML Academy</p>
+              </div>
+              <div class="education__item website-coding">
+                <h3>HTML & CSS. Professional Website Coding</h3>
+                <p>01/18 - 03/21 2021</p>
+                <p>HTML Academy</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <p>© 2022 by Timur Tokumov</p>
+          <div class="page-footer__github">
+            <a href="https://github.com/TTscript"></a>
+          </div>
+          <a class="page-footer__rs-logo" href="https://rs.school/js/">
+            <img src="img/svg/rs-logo.svg" width="140" height="80" alt="Логотип RS School">
+          </a>
+        </div>
+      </footer>
     </div>
-    <script src="index.js" type="module"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-

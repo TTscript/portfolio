@@ -1,0 +1,34 @@
+section.about-me > h2 {
+  font-family: "Montserrat Black", "Roboto", sans-serif;
+  font-size: 120px;
+  line-height: 134px;
+  color: $about-me;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 80px;
+    line-height: 92px;
+  }
+}
+
+.about-me h3 {
+  font-size: 24px;
+  line-height: 32px;
+  color: $saffron;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.about-me p {
+  color: $white;
+  margin: 0;
+  padding: 0;
+}

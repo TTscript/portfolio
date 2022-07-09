@@ -1,0 +1,14 @@
+.page-main {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  font-family: "Montserrat Medium";
+  color: $black-coffee;
+  background-color: $black-coffee;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+
+  @include vp-767 {
+    display: block;
+  }
+}

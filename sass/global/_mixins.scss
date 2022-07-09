@@ -1,0 +1,146 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-1919 {
+  @media (max-width: $vp-1920 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: $vp-1440 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: $vp-1280 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: $vp-1024 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-890-and-vp-1023 {
+  @media (min-width: $vp-890) and (max-width: $vp-1023) {
+    @content;
+  }
+}
+
+@mixin vp-768-and-vp-1023 {
+  @media (min-width: $vp-768) and (max-width: $vp-1023) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-768 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-800 {
+  @media (max-width: $vp-800) {
+    @content;
+  }
+}
+
+@mixin vp-550 {
+  @media (max-width: $vp-550) {
+    @content;
+  }
+}
+
+@mixin vp-417 {
+  @media (max-width: 417px) {
+    @content;
+  }
+}
+
+@mixin vp-409 {
+  @media (max-width: $vp-400 + 9) {
+    @content;
+  }
+}
+
+@mixin vp-400 {
+  @media (max-width: $vp-400) {
+    @content;
+  }
+}
+
+@mixin vp-389 {
+  @media (max-width: $vp-390 - 1) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: $vp-375 - 1) {
+    @content;
+  }
+}
+
+@mixin no-touch {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    @content;
+  }
+}
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

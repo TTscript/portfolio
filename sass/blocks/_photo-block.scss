@@ -1,0 +1,14 @@
+.photo-block {
+  display: flex;
+  background-color: $black-coffee;
+}
+
+.photo-block__wrapper {
+  width: 100%;
+}
+
+.photo-block img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

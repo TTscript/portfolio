@@ -1,0 +1,37 @@
+.education__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 29px;
+  padding: 0;
+  margin: 20px;
+}
+
+.education__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $black-olive;
+  max-width: 300px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 35px 15px;
+}
+
+.education__item h3 {
+  text-align: center;
+  color: $olive-green;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.education__item p {
+  margin: 0;
+  padding: 0;
+}
+
+.education__item p:first-of-type {
+  font-style: italic;
+  margin: 0 0 20px;
+}

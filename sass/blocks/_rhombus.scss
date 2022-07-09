@@ -1,0 +1,21 @@
+.rhombus {
+  display: inline-block;
+  background-color: $black-coffee;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  border-radius: 2px;
+  animation: rotate-rhombus 6s linear 0s infinite forwards;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes rotate-rhombus {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(320deg);
+  }
+}

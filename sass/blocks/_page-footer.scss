@@ -1,0 +1,68 @@
+.page-footer {
+  height: 100px;
+  background-color: $black-coffee;
+  border-top: 2px double $saffron;
+}
+
+.page-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.page-footer__github a {
+  position: relative;
+  display: block;
+  width: 47.5px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.page-footer__github a::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -4px;
+  width: 47px;
+  height: 47px;
+  -webkit-mask: url("../img/svg/github.svg");
+  mask: url("../img/svg/github.svg");
+  -webkit-mask-size: 49px;
+  mask-size: 49px;
+  background-color: $white;
+}
+
+.page-footer__inner p {
+  font-family: "Monserrat Bold";
+  font-family: "Montserrat Bold";
+  font-size: 20px;
+  line-height: 28px;
+  color: $white;
+}
+
+.page-footer__rs-logo {
+  -webkit-mask: url("../img/svg/rs-logo.svg");
+  mask: url("../img/vkontakte.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-size: 24px 13px;
+  background-color: $white;
+}
+
+.page-footer__rs-logo img {
+  -webkit-mask: url("../img/svg/rs-logo.svg");
+  mask: url("../img/svg/rs-logo.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-size: 24px 13px;
+  background-color: $white;
+}

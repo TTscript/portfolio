@@ -1,0 +1,83 @@
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border: 3px solid $black-coffee;
+  border-radius: 50%;
+}
+
+.skill__inner.pug .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/pug.svg");
+  mask: url("../img/svg/pug.svg");
+  -webkit-mask-size: 58px;
+  mask-size: 58px;
+  background-color: $black-coffee;
+  width: 58px;
+  height: 36px;
+}
+
+.skill__inner.sass .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/sass.svg");
+  mask: url("../img/svg/sass.svg");
+  -webkit-mask-size: 50px;
+  mask-size: 50px;
+  background-color: $black-coffee;
+  width: 50px;
+  height: 50px;
+}
+
+.skill__inner.js .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/js.svg");
+  mask: url("../img/svg/js.svg");
+  -webkit-mask-size: 50px;
+  mask-size: 50px;
+  background-color: $black-coffee;
+  width: 50px;
+  height: 50px;
+}
+
+.skill__inner.gulp .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/gulp.svg");
+  mask: url("../img/svg/gulp.svg");
+  -webkit-mask-size: 50px 75px;
+  mask-size: 50px 75px;
+  background-color: $black-coffee;
+  width: 50px;
+  height: 75px;
+}
+
+.skill__inner.git .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/git.svg");
+  mask: url("../img/svg/git.svg");
+  -webkit-mask-size: 60px 75px;
+  mask-size: 60px 75px;
+  background-color: $black-coffee;
+  width: 60px;
+  height: 75px;
+}
+
+.skill__inner.figma .skill__img {
+  display: block;
+  -webkit-mask: url("../img/svg/figma.svg");
+  mask: url("../img/svg/figma.svg");
+  -webkit-mask-size: 80px;
+  mask-size: 80px;
+  background-color: $black-coffee;
+  width: 80px;
+  height: 80px;
+}
