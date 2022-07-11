@@ -68,11 +68,58 @@ function backToTop() {
 const pageBody = document.querySelector('body');
 const burgerMenu = document.querySelector('.burger-menu');
 const headerInner = document.querySelector('.page-header__inner');
+const headerNav = document.querySelector('.page-header__inner nav');
+const headerList = document.querySelector('.page-header__inner ul');
+const headerListItems = [...document.querySelectorAll('.page-header__inner a')];
+
+let ifBurgerActive = false;
 
 burgerMenu.addEventListener('click', (e) => {
-  e.preventDefault();
+  ifBurgerActive = !ifBurgerActive;
+
+  burgerMenu.focus();
   burgerMenu.classList.toggle('burger-menu--active');
   headerInner.classList.toggle('page-header__inner--active');
   pageBody.classList.toggle('page-body--overflow');
+  headerList.classList.toggle('page-header__list--active');
+
+  ifBurgerActive ? addScrollBar() : headerNav.classList.remove('page-header__nav--scroll-bar');
+  ifBurgerActive ? window.addEventListener('keydown', escDown) : window.removeEventListener('keydown', escDown);
+  // ifBurgerActive ? window.addEventListener('keydown', trapTabKey) : window.removeEventListener('keydown', trapTabKey)
+
 });
+
+function addScrollBar() {
+  setTimeout(() => {
+    if (ifBurgerActive) {
+      headerNav.classList.add('page-header__nav--scroll-bar')
+    }
+  }, 3000);
+}
+
+function escDown(e) {
+  if (e.key === 'Esc' || e.key === 'Escape') {
+    burgerMenu.classList.remove('burger-menu--active');
+    headerInner.classList.remove('page-header__inner--active');
+    pageBody.classList.remove('page-body--overflow');
+    headerList.classList.remove('page-header__list--active');
+    ifBurgerActive = !ifBurgerActive;
+    console.log(ifBurgerActive)
+  }
+}
+
+headerListItems.forEach((item) => item.addEventListener('click', () => {
+  burgerMenu.classList.remove('burger-menu--active');
+  headerInner.classList.remove('page-header__inner--active');
+  pageBody.classList.remove('page-body--overflow');
+  headerList.classList.remove('page-header__list--active');
+  ifBurgerActive = !ifBurgerActive;
+}));
+
+
+// function trapTabKey(e) {
+//   headerListItems.forEach((item, index) => {
+//     item === headerListItems[headerListItems.length - 1] && item.focus() && e.key === 'Tab' ? burgerMenu.focus() : '';
+//   });
+// }
 

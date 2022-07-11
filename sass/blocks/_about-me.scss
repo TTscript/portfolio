@@ -12,6 +12,11 @@ section.about-me > h2 {
     font-size: 80px;
     line-height: 92px;
   }
+
+  @include vp-767 {
+    font-size: 55px;
+    line-height: 65px;
+  }
 }
 
 .about-me h3 {
