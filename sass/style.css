@@ -767,15 +767,17 @@ p[data-phone=phone] a::before {
   width: 100%;
 }
 
-.page-header__inner.page-header__inner--active {
-  height: 200%;
-  width: 100%;
-  position: fixed;
-  border-bottom-left-radius: 80%;
-  border-bottom-right-radius: 80%;
-  transition: 5s ease;
-  z-index: 1;
-  overflow: hidden;
+@media (max-width: 767px) {
+  .page-header__inner.page-header__inner--active {
+    height: 200%;
+    width: 100%;
+    position: fixed;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    transition: 5s ease;
+    z-index: 1;
+    overflow: hidden;
+  }
 }
 
 .page-header__inner nav {
@@ -820,7 +822,6 @@ p[data-phone=phone] a::before {
   min-height: 80px;
   padding: 0;
   margin: 0;
-  transition: 3s ease;
 }
 @media (max-width: 767px) {
   .page-header__inner ul {
@@ -1401,6 +1402,10 @@ p[data-phone=phone] a::before {
   mask-size: cover;
   background-size: 24px 13px;
   background-color: rgb(247, 238, 202);
+}
+
+.code-examples {
+  white-space: pre-line;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
