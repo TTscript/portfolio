@@ -1,5 +1,9 @@
 .page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: 100px;
+  width: 100%;
   background-color: $black-coffee;
   border-top: 2px double $saffron;
 }
@@ -10,9 +14,11 @@
   align-items: center;
   list-style: none;
   height: 100%;
+  width: 100%;
   padding: 0 30px;
 
   @include vp-455 {
+    padding: 20px 10px;
     flex-direction: column;
   }
 }
@@ -22,6 +28,7 @@
 
   @include vp-455 {
     order: 2;
+    margin-bottom: 30px;
   }
 }
 
@@ -59,6 +66,11 @@
   font-size: 20px;
   line-height: 28px;
   color: $white;
+  margin: 0;
+
+  @include vp-455 {
+    order: 3;
+  }
 }
 
 .page-footer__rs-logo {
@@ -68,6 +80,10 @@
   mask-size: cover;
   background-size: 24px 13px;
   background-color: $white;
+
+  @include vp-455 {
+    margin-bottom: 30px;
+  }
 }
 
 .page-footer__rs-logo img {

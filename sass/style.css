@@ -1330,7 +1330,11 @@ p[data-phone=phone] a::before {
 }
 
 .page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: 100px;
+  width: 100%;
   background-color: #362c2b;
   border-top: 2px double #ebbc30;
 }
@@ -1341,10 +1345,12 @@ p[data-phone=phone] a::before {
   align-items: center;
   list-style: none;
   height: 100%;
+  width: 100%;
   padding: 0 30px;
 }
 @media (max-width: 455px) {
   .page-footer__inner {
+    padding: 20px 10px;
     flex-direction: column;
   }
 }
@@ -1355,6 +1361,7 @@ p[data-phone=phone] a::before {
 @media (max-width: 455px) {
   .page-footer__github {
     order: 2;
+    margin-bottom: 30px;
   }
 }
 
@@ -1391,6 +1398,12 @@ p[data-phone=phone] a::before {
   font-size: 20px;
   line-height: 28px;
   color: rgb(247, 238, 202);
+  margin: 0;
+}
+@media (max-width: 455px) {
+  .page-footer__inner p {
+    order: 3;
+  }
 }
 
 .page-footer__rs-logo {
@@ -1400,6 +1413,11 @@ p[data-phone=phone] a::before {
   mask-size: cover;
   background-size: 24px 13px;
   background-color: rgb(247, 238, 202);
+}
+@media (max-width: 455px) {
+  .page-footer__rs-logo {
+    margin-bottom: 30px;
+  }
 }
 
 .page-footer__rs-logo img {
