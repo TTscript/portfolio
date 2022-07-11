@@ -6,13 +6,14 @@
 .page-header__inner {
   display: fixed;
   background-color: $saffron;
-  height: 80px;
+  min-height: 80px;
   width: 100%;
+  padding: 5px;
 }
 
 .page-header__inner.page-header__inner--active {
   @include vp-767 {
-    height: 200%;
+    min-height: 200%;
     width: 100%;
     position: fixed;
     border-bottom-left-radius: 80%;
@@ -66,7 +67,7 @@
 
   @include vp-767 {
     flex-direction: column;
-    padding-top: 50px;
+    padding: 50px 5px 5px;
     overflow: hidden;
     min-height: 0;
     transition: 3s ease;
@@ -83,15 +84,30 @@
 .page-header__inner li {
   position: relative;
   list-style: none;
-  padding: 31px 20px;
+}
+
+.page-header__inner a {
+  display: block;
+  font-family: "Montserrat Black", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: underline;
+  color: $black-coffee;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  padding: 31px 20px;
+
 
   @include vp-1023 {
+    font-size: 14px;
+    line-height: 18px;
     padding: 31px 5px;
+
   }
 }
 
-.page-header__inner li::before {
+.page-header__inner a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -103,24 +119,10 @@
   background: $black-coffee;
 }
 
-.page-header__inner li:hover::before {
+.page-header__inner a:hover::before {
   transform: scaleX(1);
 }
 
-.page-header__inner a {
-  font-family: "Montserrat Black", "Arial", sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  text-decoration: underline;
-  color: $black-coffee;
-  margin: 0;
-  padding: 0;
-
-  @include vp-1023 {
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
 
 .burger-menu {
   position: relative;

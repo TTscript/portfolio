@@ -19,7 +19,8 @@ section.about-me > h2 {
   }
 }
 
-.about-me h3 {
+.about-me p {
+  font-family: "Montserrat Bold";
   font-size: 24px;
   line-height: 32px;
   color: $saffron;
@@ -30,10 +31,4 @@ section.about-me > h2 {
     font-size: 20px;
     line-height: 28px;
   }
-}
-
-.about-me p {
-  color: $white;
-  margin: 0;
-  padding: 0;
 }

@@ -1,5 +1,5 @@
 .page-footer {
-  height: 100px;
+  min-height: 100px;
   background-color: $black-coffee;
   border-top: 2px double $saffron;
 }
@@ -11,6 +11,18 @@
   list-style: none;
   height: 100%;
   padding: 0 30px;
+
+  @include vp-455 {
+    flex-direction: column;
+  }
+}
+
+.page-footer__github {
+  padding: 0 30px;
+
+  @include vp-455 {
+    order: 2;
+  }
 }
 
 .page-footer__github a {

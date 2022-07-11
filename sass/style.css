@@ -500,7 +500,8 @@ section.about-me > h2 {
   }
 }
 
-.about-me h3 {
+.about-me p {
+  font-family: "Montserrat Bold";
   font-size: 24px;
   line-height: 32px;
   color: #ebbc30;
@@ -508,16 +509,10 @@ section.about-me > h2 {
   padding: 0;
 }
 @media (max-width: 1023px) {
-  .about-me h3 {
+  .about-me p {
     font-size: 20px;
     line-height: 28px;
   }
-}
-
-.about-me p {
-  color: rgb(247, 238, 202);
-  margin: 0;
-  padding: 0;
 }
 
 .all-skills ul {
@@ -763,13 +758,14 @@ p[data-phone=phone] a::before {
 .page-header__inner {
   display: fixed;
   background-color: #ebbc30;
-  height: 80px;
+  min-height: 80px;
   width: 100%;
+  padding: 5px;
 }
 
 @media (max-width: 767px) {
   .page-header__inner.page-header__inner--active {
-    height: 200%;
+    min-height: 200%;
     width: 100%;
     position: fixed;
     border-bottom-left-radius: 80%;
@@ -826,7 +822,7 @@ p[data-phone=phone] a::before {
 @media (max-width: 767px) {
   .page-header__inner ul {
     flex-direction: column;
-    padding-top: 50px;
+    padding: 50px 5px 5px;
     overflow: hidden;
     min-height: 0;
     transition: 3s ease;
@@ -843,16 +839,29 @@ p[data-phone=phone] a::before {
 .page-header__inner li {
   position: relative;
   list-style: none;
-  padding: 31px 20px;
+}
+
+.page-header__inner a {
+  display: block;
+  font-family: "Montserrat Black", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #362c2b;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  padding: 31px 20px;
 }
 @media (max-width: 1023px) {
-  .page-header__inner li {
+  .page-header__inner a {
+    font-size: 14px;
+    line-height: 18px;
     padding: 31px 5px;
   }
 }
 
-.page-header__inner li::before {
+.page-header__inner a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -864,24 +873,8 @@ p[data-phone=phone] a::before {
   background: #362c2b;
 }
 
-.page-header__inner li:hover::before {
+.page-header__inner a:hover::before {
   transform: scaleX(1);
-}
-
-.page-header__inner a {
-  font-family: "Montserrat Black", "Arial", sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  text-decoration: underline;
-  color: #362c2b;
-  margin: 0;
-  padding: 0;
-}
-@media (max-width: 1023px) {
-  .page-header__inner a {
-    font-size: 14px;
-    line-height: 18px;
-  }
 }
 
 .burger-menu {
@@ -1337,7 +1330,7 @@ p[data-phone=phone] a::before {
 }
 
 .page-footer {
-  height: 100px;
+  min-height: 100px;
   background-color: #362c2b;
   border-top: 2px double #ebbc30;
 }
@@ -1349,6 +1342,20 @@ p[data-phone=phone] a::before {
   list-style: none;
   height: 100%;
   padding: 0 30px;
+}
+@media (max-width: 455px) {
+  .page-footer__inner {
+    flex-direction: column;
+  }
+}
+
+.page-footer__github {
+  padding: 0 30px;
+}
+@media (max-width: 455px) {
+  .page-footer__github {
+    order: 2;
+  }
 }
 
 .page-footer__github a {
@@ -1404,7 +1411,7 @@ p[data-phone=phone] a::before {
   background-color: rgb(247, 238, 202);
 }
 
-.code-examples {
+.code-examples code {
   white-space: pre-line;
 }
 
